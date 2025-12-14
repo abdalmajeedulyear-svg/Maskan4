@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="كيف كانت تجربتك مع هذا العقار؟"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- النجوم -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:rating="0"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+
+    </LinearLayout>
+
+    <!-- تسميات النجوم -->
+    <TextView
+        android:id="@+id/tvRatingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اختر تقييمك"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- ❌ بدلاً من TextInputLayout، استخدم EditText عادي -->
+
+    <!-- عنوان حقل التعليق -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="التعليق (اختياري):"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- حقل التعليق -->
+    <EditText
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="120dp"
+        android:maxLines="5"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edittext_background"
+        android:padding="16dp"
+        android:hint="اكتب تعليقك هنا..."
+        android:textSize="14sp"/>
+
+    <!-- نص توجيهي -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* سيتم نشر تعليقك باسم مستخدم"
+        android:textSize="12sp"
+        android:textColor="#9E9E9E"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
